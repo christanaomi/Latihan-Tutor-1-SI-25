@@ -8,7 +8,7 @@ public class T00 {
         int bilangan1, bilangan2;
 
         System.out.println("Masukkan dua bilangan");
-        System.out.println("Masukkan bilangan pertama");
+        System.out.println("Masukkan bilangan pertama");S
         System.out.println("Masukkan bilangan kedua");
         bilangan1 = Integer.parseInt(input.nextLine());
         bilangan2 = Integer.parseInt(input.nextLine());
