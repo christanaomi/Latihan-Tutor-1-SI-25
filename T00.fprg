@@ -2,62 +2,60 @@
 <flowgorithm fileversion="4.2">
     <attributes>
         <attribute name="name" value="T00"/>
-        <attribute name="authors" value="user"/>
+        <attribute name="authors" value="ASUS"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-10-01 09:14:22 PM"/>
-        <attribute name="created" value="dXNlcjtMQVBUT1AtNEc3MTlVQ0Y7MjAyNS0xMC0wMTswODoyNjozOCBQTTsyNzQ0"/>
-        <attribute name="edited" value="dXNlcjtMQVBUT1AtNEc3MTlVQ0Y7MjAyNS0xMC0wMTswOToxNDoyMiBQTTsxOzI4NDM="/>
+        <attribute name="saved" value="2025-10-03 03.13.44 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtVkJQSEVHNE87MjAyNS0xMC0wMzswMi41OC4zMCBQTTsyNjUx"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtVkJQSEVHNE87MjAyNS0xMC0wMzswMy4wMC4wNiBQTTs0O3VzZXI7TEFQVE9QLTRHNzE5VUNGOzIwMjUtMTAtMDE7MDg6MjY6MzggUE07VDAwWzFdLmZwcmc7NjUwNQ=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtVkJQSEVHNE87MjAyNS0xMC0wMzswMy4xMy40NCBQTTszOzI3NTg="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <declare name="bilangan1, bilangan2" type="Integer" array="False" size=""/>
-            <output expression="&quot;Masukkan dua bilangan&quot;" newline="True"/>
-            <output expression="&quot;Masukkan bilangan pertama&quot;" newline="True"/>
-            <output expression="&quot;Masukkan bilangan kedua&quot;" newline="True"/>
+            <declare name="hasilkali" type="Integer" array="False" size=""/>
+            <declare name="hasiljumlah" type="Integer" array="False" size=""/>
             <input variable="bilangan1"/>
             <input variable="bilangan2"/>
             <if expression="bilangan1 % 2 == 0">
                 <then>
-                    <output expression="&quot;Bilangan pertama genap&quot;" newline="True"/>
+                    <output expression="&quot;Bilangan pertama: Genap&quot;" newline="True"/>
                 </then>
                 <else>
-                    <output expression="&quot;Bilangan pertama ganjil&quot;" newline="True"/>
+                    <output expression="&quot;Bilangan pertama: Ganjil&quot;" newline="True"/>
                 </else>
             </if>
             <if expression="bilangan2 % 2 == 0">
                 <then>
-                    <output expression="&quot;Bilangan kedua genap&quot;" newline="True"/>
+                    <output expression="&quot;Bilangan kedua: Genap&quot;" newline="True"/>
                 </then>
                 <else>
-                    <output expression="&quot;Bilangan kedua ganjil&quot;" newline="True"/>
+                    <output expression="&quot;Bilangan kedua: Ganjil&quot;" newline="True"/>
                 </else>
             </if>
             <if expression="bilangan1 &gt; bilangan2">
                 <then>
-                    <output expression="&quot;bilangan pertama lebih besar&quot;" newline="True"/>
+                    <output expression="&quot;Bilangan pertama lebih besar&quot;" newline="True"/>
                 </then>
                 <else>
                     <if expression="bilangan2 &gt; bilangan1">
                         <then>
-                            <output expression="&quot;bilangan kedua lebih besar&quot;" newline="True"/>
+                            <output expression="&quot;Bilangan kedua lebih besar&quot;" newline="True"/>
                         </then>
                         <else>
-                            <output expression="&quot;kedua bilangan sama besar&quot;" newline="True"/>
+                            <output expression="&quot;Kedua bilangan sama besar&quot;" newline="True"/>
                         </else>
                     </if>
                 </else>
             </if>
-            <if expression="bilangan1 % 2 == 0 &amp;&amp; bilangan2 % 2 == 0">
+            <if expression="(bilangan1 % 2 = 0)&amp;&amp;(bilangan2 % 2 = 0)">
                 <then>
-                    <declare name="hasiljumlah" type="Integer" array="False" size=""/>
                     <assign variable="hasiljumlah" expression="bilangan1 + bilangan2"/>
-                    <output expression="&quot;hasil penjumlahan&quot;&amp;hasiljumlah" newline="True"/>
+                    <output expression="&quot;Hasil penjumlahan: &quot;&amp;hasiljumlah" newline="True"/>
                 </then>
                 <else>
-                    <if expression="bilangan1 % 2 != 0">
+                    <if expression="(bilangan1 % 2 != 0)&amp;&amp;(bilangan2 % 2 != 0)">
                         <then>
-                            <declare name="hasilkali" type="Integer" array="False" size=""/>
                             <assign variable="hasilkali" expression="bilangan1 * bilangan2"/>
                             <output expression="&quot;Hasil perkalian: &quot;&amp;hasilkali" newline="True"/>
                         </then>
